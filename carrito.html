@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tu Carrito — Yerba Mate Soberanía</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <div class="coop">
+          <img src="assets/logocoperativa.jpg" alt="Cooperativa Itatí">
+          <span>Cooperativa Agropecuaria Colonia Itatí Ltda.</span>
+        </div>
+
+        <nav class="navbar">
+          <a href="index.html">Inicio</a>
+            <a href="productos.html" aria-label="Ver productos">Productos</a>
+            <a href="carrito.html" class="active" aria-label="Ver carrito">Carrito <span id="cartCounter" class="cart-counter">0</span></a>
+            <a href="contacto.html" aria-label="Ir a contacto">Contacto</a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h2 class="section-title">Tu Carrito</h2>
+      <p class="section-sub">Revisá tus productos y completá tus datos para finalizar la compra.</p>
+
+      <div class="two-col" style="align-items:flex-start;">
+        <section class="purchase-form" style="width:100%;">
+          <h3 style="margin-bottom:16px;">Resumen</h3>
+
+          <div id="cartItems"></div>
+          <div class="form-group" style="margin-top:20px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span>Subtotal:</span>
+              <span id="subtotal">$0</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+              <span>Envío:</span>
+              <span id="shipping">$0</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-weight:700; font-size:1.1rem;">
+              <span>Total:</span>
+              <span id="total">$0</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="purchase-form" style="width:100%;">
+          <h3 style="margin-bottom:16px;">Información de envío</h3>
+
+          <form id="checkoutForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nombre *</label>
+                <input name="name" required>
+              </div>
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" name="email" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Teléfono *</label>
+                <input name="phone" required>
+              </div>
+              <div class="form-group">
+                <label>Dirección *</label>
+                <input name="address" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Provincia *</label>
+                <input name="province" required>
+              </div>
+              <div class="form-group">
+                <label>Método de pago *</label>
+                <select name="payment" required>
+                  <option value="">Elegir</option>
+                  <option value="mercado-pago">Mercado Pago</option>
+                  <option value="transferencia">Transferencia</option>
+                  <option value="tarjeta">Tarjeta</option>
+                  <option value="efectivo">Efectivo</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Notas (opcional)</label>
+              <textarea name="notes" rows="3" placeholder="Ej.: horario de entrega, aclaraciones"></textarea>
+            </div>
+
+            <button id="checkoutBtn" type="submit" class="btn" style="width:100%; justify-content:center;" aria-label="Finalizar compra">
+              <span class="btn-text">Finalizar Compra</span>
+              <span class="btn-loading" style="display:none">Procesando…</span>
+            </button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <p>📞 <a href="https://wa.me/543757658938" target="_blank" rel="noopener">+54 9 3757 658938</a></p>
+      <p>✉️ <a href="mailto:yerbamatesoberania@gmail.com">yerbamatesoberania@gmail.com</a></p>
+      <p>© 2025 Yerba Mate Soberanía </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/cart.js" defer></script>
+</body>
+</html>

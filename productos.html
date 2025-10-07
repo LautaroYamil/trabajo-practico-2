@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Yerba Mate Soberanía</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="container">
+            <div class="topbar-inner">
+                <div class="coop">
+                    <img src="assets/logocoperativa.jpg" alt="Cooperativa Itatí">
+                    <span>Cooperativa Agropecuaria Colonia Itatí Ltda.</span>
+                </div>
+                <nav class="navbar">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="carrito.html">Carrito</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+                <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="productos" class="section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <p class="section-sub">Descubre nuestra yerba mate y accesorios de la más alta calidad</p>
+            
+            <div class="product-nav">
+                <div class="product-nav-inner">
+                    <button class="view-option active" data-view="table">Vista de Tabla</button>
+                    <button class="view-option" data-view="grid">Vista de Cajas</button>
+                </div>
+            </div>
+            
+            <!-- VISTA DE TABLA -->
+            <div id="table-view" class="view-section active">
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Combo Mate + Bombilla Acero</strong></td>
+                            <td>Set completo con mate de cerámica y bombilla de acero inoxidable</td>
+                            <td>$5.000</td>
+                            <td><button class="btn view-product" data-product="1">Ver Ficha</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Yerba Mate 500g elaborada con palo</strong></td>
+                            <td>Yerba mate tradicional con palo, sabor suave y equilibrado</td>
+                            <td>$1.800</td>
+                            <td><button class="btn view-product" data-product="2">Ver Ficha</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Termo Soberanía Acero</strong></td>
+                            <td>Termo de acero inoxidable de 1 litro, mantiene la temperatura por horas</td>
+                            <td>$39.900</td>
+                            <td><button class="btn view-product" data-product="3">Ver Ficha</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Termo Soberanía Plástico</strong></td>
+                            <td>Termo de plástico de alta calidad de 1 litro, práctico y resistente</td>
+                            <td>$15.000</td>
+                            <td><button class="btn view-product" data-product="4">Ver Ficha</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- VISTA DE CAJAS -->
+            <div id="grid-view" class="view-section">
+                <div class="product-grid">
+                    <div class="product-box">
+                        <img src="assets/combo-mate.jpg" alt="Combo Mate + Bombilla Acero" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Combo Mate + Bombilla Acero</h3>
+                            <p class="product-desc">Set completo con mate de cerámica y bombilla de acero inoxidable</p>
+                            <div class="product-price">$5.000</div>
+                            <button class="btn view-product" data-product="1">Ver Ficha</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-box">
+                        <img src="assets/yerba-500g.jpg" alt="Yerba Mate 500g elaborada con palo" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Yerba Mate 500g elaborada con palo</h3>
+                            <p class="product-desc">Yerba mate tradicional con palo, sabor suave y equilibrado</p>
+                            <div class="product-price">$1.800</div>
+                            <button class="btn view-product" data-product="2">Ver Ficha</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-box">
+                        <img src="assets/termo-acero.jpg" alt="Termo Soberanía Acero" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Termo Soberanía Acero</h3>
+                            <p class="product-desc">Termo de acero inoxidable de 1 litro, mantiene la temperatura por horas</p>
+                            <div class="product-price">$39.900</div>
+                            <button class="btn view-product" data-product="3">Ver Ficha</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-box">
+                        <img src="assets/termo-plastico.jpg" alt="Termo Soberanía Plástico" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-title">Termo Soberanía Plástico</h3>
+                            <p class="product-desc">Termo de plástico de alta calidad de 1 litro, práctico y resistente</p>
+                            <div class="product-price">$15.000</div>
+                            <button class="btn view-product" data-product="4">Ver Ficha</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>📞 <a href="https://wa.me/543757658938" target="_blank" rel="noopener">+54 9 3757 658938</a></p>
+            <p>✉️ <a href="mailto:yerbamatesoberania@gmail.com">yerbamatesoberania@gmail.com</a></p>
+            <p>© 2025 Yerba Mate Soberanía </p>
+        </div>
+    </footer>
+
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+            <div class="product-detail">
+                <div class="product-gallery">
+                    <img id="modalProductImage" src="" alt="" class="product-main-image">
+                </div>
+                <div class="product-info-detail">
+                    <h2 id="modalProductTitle"></h2>
+                    <div class="product-price-detail" id="modalProductPrice"></div>
+                    <p class="product-description-detail" id="modalProductDescription"></p>
+                    <div class="product-specs">
+                        <h3>Especificaciones</h3>
+                        <div class="spec-item">
+                            <span class="spec-label">Material:</span>
+                            <span class="spec-value" id="modalProductMaterial"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Capacidad:</span>
+                            <span class="spec-value" id="modalProductCapacity"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Origen:</span>
+                            <span class="spec-value" id="modalProductOrigin"></span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Disponibilidad:</span>
+                            <span class="spec-value" id="modalProductAvailability"></span>
+                        </div>
+                    </div>
+                   <div class="product-actions">
+                        <button class="btn btn-cart">Añadir al carrito</button>
+                        <button class="btn btn-outline" id="buyNowBtn">Comprar ahora</button>
+                    </div>
+                    <div class="nav-products">
+                        <button class="nav-product-btn" id="prevProduct">← Anterior</button>
+                        <button class="nav-product-btn" id="nextProduct">Siguiente →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script> 
+</body>
+</html>
