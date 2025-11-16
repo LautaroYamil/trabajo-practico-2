@@ -42,3 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+function mostrarNotificacion(texto) {
+    Toastify({
+        text: texto,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "#4CAF50",
+        stopOnFocus: true
+    }).showToast();
+}
+
