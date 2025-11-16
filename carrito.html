@@ -8,6 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+  <!-- Toastify JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
 
@@ -21,9 +27,9 @@
 
         <nav class="navbar">
           <a href="index.html">Inicio</a>
-            <a href="productos.html" aria-label="Ver productos">Productos</a>
-            <a href="carrito.html" class="active" aria-label="Ver carrito">Carrito <span id="cartCounter" class="cart-counter">0</span></a>
-            <a href="contacto.html" aria-label="Ir a contacto">Contacto</a>
+          <a href="productos.html" aria-label="Ver productos">Productos</a>
+          <a href="carrito.html" class="active" aria-label="Ver carrito">Carrito <span id="cartCounter" class="cart-counter">0</span></a>
+          <a href="contacto.html" aria-label="Ir a contacto">Contacto</a>
         </nav>
 
         <button class="menu-toggle" aria-label="Abrir menú">☰</button>
@@ -37,10 +43,13 @@
       <p class="section-sub">Revisá tus productos y completá tus datos para finalizar la compra.</p>
 
       <div class="two-col" style="align-items:flex-start;">
+        
+        <!-- RESUMEN -->
         <section class="purchase-form" style="width:100%;">
           <h3 style="margin-bottom:16px;">Resumen</h3>
 
           <div id="cartItems"></div>
+
           <div class="form-group" style="margin-top:20px;">
             <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
               <span>Subtotal:</span>
@@ -57,6 +66,7 @@
           </div>
         </section>
 
+        <!-- FORMULARIO DE ENVÍO -->
         <section class="purchase-form" style="width:100%;">
           <h3 style="margin-bottom:16px;">Información de envío</h3>
 
@@ -105,11 +115,21 @@
               <textarea name="notes" rows="3" placeholder="Ej.: horario de entrega, aclaraciones"></textarea>
             </div>
 
-            <button id="checkoutBtn" type="submit" class="btn" style="width:100%; justify-content:center;" aria-label="Finalizar compra">
+            <!-- BOTÓN CON NOTIFICACIÓN -->
+            <button 
+              id="checkoutBtn" 
+              type="submit" 
+              class="btn" 
+              style="width:100%; justify-content:center;" 
+              aria-label="Finalizar compra"
+              onclick="mostrarNotificacion('Compra finalizada correctamente')">
+              
               <span class="btn-text">Finalizar Compra</span>
               <span class="btn-loading" style="display:none">Procesando…</span>
+
             </button>
           </form>
+
         </section>
       </div>
     </div>
@@ -127,3 +147,4 @@
   <script src="js/cart.js" defer></script>
 </body>
 </html>
+
